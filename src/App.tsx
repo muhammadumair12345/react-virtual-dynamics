@@ -9,10 +9,9 @@ const App = () => {
       viewportHeight={500}
       itemHeight={100}
       gap={10}
-      isLoading={true}
-      gridColumns={4}
+      gridColumns={2}
       renderItem={(index, style) => (
-        <div key={index} style={{ ...style, background: "red" }}>
+        <div key={index} style={style}>
           {data[index]}
         </div>
       )}

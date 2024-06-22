@@ -11,7 +11,7 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
   dataLength,
   viewportHeight,
   gridColumns = 1,
-  loadMore,
+  loadMore = () => {},
   isLoading = false,
   renderItem,
   itemHeight,
@@ -35,7 +35,7 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
         e.currentTarget.scrollTop + e.currentTarget.clientHeight >=
         totalHeight - 100
       ) {
-        loadMore && loadMore();
+        loadMore();
       }
     },
     [loadMore, totalHeight]
