@@ -1,12 +1,12 @@
 import { VirtualizedList } from './components';
 
-const data = Array.from({ length: 200 }).map((_, i) => i + 1);
+const data = Array.from({ length: 1000 }).map((_, i) => i + 1);
 
 const App = () => {
   return (
     <VirtualizedList
       dataLength={data.length}
-      viewportHeight={500}
+      viewportHeight={800}
       itemHeight={100}
       gap={10}
       gridColumns={4}
