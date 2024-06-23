@@ -7,6 +7,17 @@ import React, {
 } from "react";
 import "./style.css";
 
+interface VirtualizedListProps {
+  dataLength: number;
+  viewportHeight: number;
+  gridColumns?: number;
+  loadMore?: () => void;
+  isLoading?: boolean;
+  renderItem: (index: number, style: React.CSSProperties) => React.ReactNode;
+  itemHeight: number;
+  gap: number;
+}
+
 const VirtualizedList: React.FC<VirtualizedListProps> = ({
   dataLength,
   viewportHeight,

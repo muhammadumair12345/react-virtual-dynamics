@@ -1,5 +1,15 @@
 {
   "files": [],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+
+    // Absolute import
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
   "references": [
     {
       "path": "./tsconfig.app.json"
