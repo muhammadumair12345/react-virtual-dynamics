@@ -5,7 +5,6 @@ import React, {
   useMemo,
   useCallback,
   ReactNode,
-  ReactElement,
 } from 'react';
 import './style.css';
 
@@ -29,7 +28,7 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
   renderItem,
   itemHeight,
   gap,
-}: VirtualizedListProps): ReactElement => {
+}) => {
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
