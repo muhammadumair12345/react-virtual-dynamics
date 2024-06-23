@@ -10,7 +10,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.ts'),
-      name: 'react-virtual-container',
+      name: 'react-virtualizer',
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
