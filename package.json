@@ -1,5 +1,5 @@
 {
-  "name": "react-virtualizer",
+  "name": "react-virtual-dynamics",
   "private": false,
   "version": "1.0.0",
   "description": "A React component for virtualized lists.",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/muhammadumair12345/react-virtualizer.git"
+    "url": "https://github.com/muhammadumair12345/react-virtual-dynamics.git"
   },
   "keywords": [
     "react",
@@ -33,9 +33,9 @@
   "author": "Muhammad Umair",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/muhammadumair12345/react-virtualizer/issues"
+    "url": "https://github.com/muhammadumair12345/react-virtual-dynamics/issues"
   },
-  "homepage": "https://github.com/muhammadumair12345/react-virtualizer#readme",
+  "homepage": "https://github.com/muhammadumair12345/react-virtual-dynamics#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",

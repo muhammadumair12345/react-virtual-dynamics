@@ -1,12 +1,12 @@
-# Contributing to react-virtualizer
+# Contributing to react-virtual-dynamics
 
-First off, thank you for considering contributing to react-virtualizer! Your help is essential for keeping it great.
+First off, thank you for considering contributing to react-virtual-dynamics! Your help is essential for keeping it great.
 
 ## How Can I Contribute?
 
 ### Reporting Bugs
 
-If you find a bug, please create an issue on our [GitHub issue tracker](https://github.com/muhammadumair12345/react-virtualizer/issues) with detailed information on how to reproduce the issue.
+If you find a bug, please create an issue on our [GitHub issue tracker](https://github.com/muhammadumair12345/react-virtual-dynamics/issues) with detailed information on how to reproduce the issue.
 
 ### Suggesting Enhancements
 
