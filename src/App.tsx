@@ -1,4 +1,4 @@
-import { VirtualizedList,Umair } from './components';
+import { VirtualizedList } from './components';
 
 const data = Array.from({ length: 200 }).map((_, i) => i + 1);
 
