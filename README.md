@@ -1,6 +1,6 @@
 # react-virtual-dynamics
 
-A React component for efficiently rendering large lists or grids of items using virtualization. This component improves performance by only rendering items that are currently visible in the viewport.
+A React component for efficiently rendering large lists or grids of items using virtualization. This component improves performance by only rendering items that are currently visible in the viewport. Additionally, it supports infinite scrolling by dynamically loading more data as the user scrolls near the end of the list.
 
 ## Installation
 
@@ -54,7 +54,9 @@ export default App;
 | `itemHeight`     | `number`                                                         |         | The height of a single item.                                                            |
 | `gap`            | `number`                                                         |         | The gap between items in the grid.                                                      |
 
-### Example with Loading Indicator and Load More
+### Example with Infinite Scrolling and Load More
+
+This example demonstrates how to use the `VirtualizedList` component with infinite scrolling. The `loadMore` function is triggered to load additional items as the user scrolls near the bottom of the list.
 
 ```tsx
 import React, { useState } from 'react';
@@ -104,8 +106,8 @@ export default App;
 
 ### Prerequisites
 
-- Node.js (>=14.x)
-- npm (>=6.x)
+- Node.js (>=18.x)
+- npm (>=9.x)
 
 ### Setup
 
@@ -138,17 +140,17 @@ npm run build
 
 This will create a `dist` folder containing the compiled code.
 
-````
+### Usage in Another Project
 
-3. Create a new React project (or use an existing one) and link the package:
+1. Create a new React project (or use an existing one) and link the package:
 
 ```bash
 npx create-react-app my-app
 cd my-app
 npm install react-virtual-dynamics
-````
+```
 
-4. Import and use the `VirtualizedList` component in your project as shown in the examples above.
+2. Import and use the `VirtualizedList` component in your project as shown in the examples above.
 
 ## Contributing
 
@@ -171,3 +173,42 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ## Acknowledgements
 
 Special thanks to the community for their contributions and feedback.
+
+## Related Libraries
+
+- **react-virtualized-auto-sizer**: A HOC that grows to fit all of the available space and passes the width and height values to its child.
+- **react-window-infinite-loader**: Helps break large data sets down into chunks that can be just-in-time loaded as they are scrolled into view. It can also be used to create infinite loading lists (e.g., Facebook or Twitter).
+- **react-vtree**: A lightweight and flexible solution to render large tree structures (e.g., file system).
+
+## Frequently Asked Questions
+
+### How is react-virtual-dynamics different from react-virtualized?
+
+React-virtual-dynamics is designed to be a smaller, faster alternative to react-virtualized, with a more beginner-friendly API. If react-virtual-dynamics meets your needs, it is recommended over react-virtualized for most cases. However, if you need features specific to react-virtualized, you have two options:
+
+1. Use react-virtualized.
+2. Extend react-virtual-dynamics with custom components to add the required functionality.
+
+### Can a list or a grid fill 100% the width or height of a page?
+
+Yes, by using the react-virtualized-auto-sizer package.
+
+### Why is my list blank when I scroll?
+
+Ensure you are attaching the style parameter to the DOM elements you render. This is necessary for correct positioning.
+
+### Can I lazy load data for my list?
+
+Yes, use the loadMore prop to implement lazy loading.
+
+### Can I add padding to the top and bottom of a list?
+
+Yes, although it requires inline styling.
+
+### Can I add gutter or padding between items?
+
+Yes, although it requires inline styling.
+
+### Does this library support "sticky" items?
+
+Yes, with a bit of user code.
