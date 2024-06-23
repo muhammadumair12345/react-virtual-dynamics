@@ -1,7 +1,7 @@
 {
   "name": "react-virtual-dynamics",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React component for virtualized lists.",
   "repository": {
     "type": "git",
