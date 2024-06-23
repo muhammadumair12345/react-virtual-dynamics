@@ -4,6 +4,8 @@ import React, {
   useEffect,
   useMemo,
   useCallback,
+  ReactNode,
+  ReactElement,
 } from 'react';
 import './style.css';
 
@@ -13,12 +15,12 @@ interface VirtualizedListProps {
   gridColumns?: number;
   loadMore?: () => void;
   isLoading?: boolean;
-  renderItem: (index: number, style: React.CSSProperties) => React.ReactNode;
+  renderItem: (index: number, style: React.CSSProperties) => ReactNode;
   itemHeight: number;
   gap: number;
 }
 
-const VirtualizedList = ({
+const VirtualizedList: React.FC<VirtualizedListProps> = ({
   dataLength,
   viewportHeight,
   gridColumns = 1,
@@ -27,7 +29,7 @@ const VirtualizedList = ({
   renderItem,
   itemHeight,
   gap,
-}: VirtualizedListProps) => {
+}: VirtualizedListProps): ReactElement => {
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -39,13 +41,11 @@ const VirtualizedList = ({
   );
 
   const handleScroll = useCallback(
-    (e: React.UIEvent<HTMLDivElement>) => {
-      setScrollTop(e.currentTarget.scrollTop);
+    (e: Event) => {
+      const target = e.target as HTMLDivElement;
+      setScrollTop(target.scrollTop);
 
-      if (
-        e.currentTarget.scrollTop + e.currentTarget.clientHeight >=
-        totalHeight - 100
-      ) {
+      if (target.scrollTop + target.clientHeight >= totalHeight - 100) {
         loadMore();
       }
     },
@@ -53,7 +53,7 @@ const VirtualizedList = ({
   );
 
   useEffect(() => {
-    const container: any = containerRef.current;
+    const container = containerRef.current;
     if (container) {
       container.addEventListener('scroll', handleScroll);
     }
@@ -73,8 +73,8 @@ const VirtualizedList = ({
     return { startIndex, endIndex };
   }, [dataLength, itemsPerRow, rowHeight, scrollTop, viewportHeight]);
 
-  const renderItems = () => {
-    const items = [];
+  const renderItems = (): ReactNode[] => {
+    const items: ReactNode[] = [];
     for (
       let index = visibleItems.startIndex;
       index <= visibleItems.endIndex;

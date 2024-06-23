@@ -2,8 +2,7 @@
   "files": [],
   "compilerOptions": {
     "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"]
+    "jsx": "react-jsx"
   },
   "references": [
     {
