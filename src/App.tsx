@@ -9,9 +9,16 @@ const App = () => {
       viewportHeight={500}
       itemHeight={100}
       gap={10}
-      gridColumns={2}
+      gridColumns={4}
       renderItem={(index, style) => (
-        <div key={index} style={style}>
+        <div
+          key={index}
+          style={{
+            ...style,
+            border: "1px solid black",
+            backgroundColor: "gray",
+          }}
+        >
           {data[index]}
         </div>
       )}
