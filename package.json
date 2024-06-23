@@ -1,7 +1,30 @@
 {
   "name": "react-virtualizer",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
+  "description": "A React component for virtualized lists.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhammadumair12345/react-virtualizer.git"
+  },
+  "keywords": [
+    "react",
+    "virtualized",
+    "list",
+    "npm-package"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muhammadumair12345/react-virtualizer/issues"
+  },
+  "homepage": "https://github.com/muhammadumair12345/react-virtualizer#readme",
   "type": "module",
   "scripts": {
     "dev": "vite",

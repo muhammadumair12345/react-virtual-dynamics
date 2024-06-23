@@ -5,7 +5,7 @@ import React, {
   useMemo,
   useCallback,
 } from "react";
-import "../styles.css";
+import "./style.css";
 
 const VirtualizedList: React.FC<VirtualizedListProps> = ({
   dataLength,
