@@ -1,4 +1,4 @@
-# react-virtualizer
+# react-virtual-container
 
 A React component for efficiently rendering large lists or grids of items using virtualization. This component improves performance by only rendering items that are currently visible in the viewport.
 
@@ -7,7 +7,7 @@ A React component for efficiently rendering large lists or grids of items using 
 To install the package, run:
 
 ```bash
-npm install react-virtualizer
+npm install react-virtual-container
 ```
 
 ## Usage
@@ -17,8 +17,8 @@ npm install react-virtualizer
 Here is a basic example of how to use the `VirtualizedList` component:
 
 ```tsx
-import React from "react";
-import VirtualizedList from "react-virtualizer";
+import React from 'react';
+import VirtualizedList from 'react-virtual-container';
 
 const data = Array.from({ length: 200 }).map((_, i) => i + 1);
 
@@ -57,8 +57,8 @@ export default App;
 ### Example with Loading Indicator and Load More
 
 ```tsx
-import React, { useState } from "react";
-import VirtualizedList from "react-virtualizer";
+import React, { useState } from 'react';
+import VirtualizedList from 'react-virtual-container';
 
 const initialData = Array.from({ length: 50 }).map((_, i) => i + 1);
 
@@ -112,8 +112,8 @@ export default App;
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/muhammadumair12345/react-virtualizer.git
-cd react-virtualizer
+git clone https://github.com/muhammadumair12345/react-virtual-container.git
+cd react-virtual-container
 ```
 
 2. Install dependencies:
@@ -145,7 +145,7 @@ This will create a `dist` folder containing the compiled code.
 ```bash
 npx create-react-app my-app
 cd my-app
-npm install react-virtualizer
+npm install react-virtual-container
 ````
 
 4. Import and use the `VirtualizedList` component in your project as shown in the examples above.
@@ -162,11 +162,11 @@ Contributions are welcome! Please follow these steps to contribute:
 
 Please ensure your code follows the project's coding standards and passes all tests.
 
-See the [Contributing Guide](https://github.com/muhammadumair12345/react-virtualizer/blob/main/CONTRIBUTING.md) for more details.
+See the [Contributing Guide](https://github.com/muhammadumair12345/react-virtual-container/blob/main/CONTRIBUTING.md) for more details.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/muhammadumair12345/react-virtualizer/blob/main/LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/muhammadumair12345/react-virtual-container/blob/main/LICENSE.md) file for details.
 
 ## Acknowledgements
 

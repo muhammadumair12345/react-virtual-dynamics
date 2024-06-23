@@ -4,8 +4,8 @@ import React, {
   useEffect,
   useMemo,
   useCallback,
-} from "react";
-import "./style.css";
+} from 'react';
+import './style.css';
 
 interface VirtualizedListProps {
   dataLength: number;
@@ -18,7 +18,7 @@ interface VirtualizedListProps {
   gap: number;
 }
 
-const VirtualizedList: React.FC<VirtualizedListProps> = ({
+const VirtualizedList = ({
   dataLength,
   viewportHeight,
   gridColumns = 1,
@@ -27,7 +27,7 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
   renderItem,
   itemHeight,
   gap,
-}) => {
+}: VirtualizedListProps) => {
   const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -38,7 +38,7 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
     [dataLength, itemsPerRow, rowHeight]
   );
 
-  const handleScroll: any = useCallback(
+  const handleScroll = useCallback(
     (e: React.UIEvent<HTMLDivElement>) => {
       setScrollTop(e.currentTarget.scrollTop);
 
@@ -53,13 +53,13 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
   );
 
   useEffect(() => {
-    const container = containerRef.current;
+    const container: any = containerRef.current;
     if (container) {
-      container.addEventListener("scroll", handleScroll);
+      container.addEventListener('scroll', handleScroll);
     }
     return () => {
       if (container) {
-        container.removeEventListener("scroll", handleScroll);
+        container.removeEventListener('scroll', handleScroll);
       }
     };
   }, [handleScroll]);
@@ -83,7 +83,7 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
       const rowIndex = Math.floor(index / itemsPerRow);
       const top = rowIndex * rowHeight;
       const style: React.CSSProperties = {
-        position: "absolute",
+        position: 'absolute',
         top,
         left: `${(index % itemsPerRow) * (100 / itemsPerRow)}%`,
         width: `calc(${100 / itemsPerRow}% - ${gap}px)`,

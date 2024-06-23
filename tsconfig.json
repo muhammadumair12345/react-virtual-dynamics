@@ -3,12 +3,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "jsx": "react-jsx",
-
-    // Absolute import
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"]
   },
   "references": [
     {
