@@ -1,1 +1,1 @@
-export { default as VirtualizedList } from "./components/VirtualizedList";
+export { default as VirtualizedList } from "./VirtualizedList";

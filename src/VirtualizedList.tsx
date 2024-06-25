@@ -6,7 +6,17 @@ import React, {
   useCallback,
   ReactNode,
 } from "react";
-import "./style.css";
+
+interface VirtualizedListProps {
+  dataLength: number;
+  viewportHeight: number;
+  gridColumns?: number;
+  loadMore?: () => void;
+  isLoading?: boolean;
+  renderItem: (index: number, style: React.CSSProperties) => ReactNode;
+  itemHeight: number;
+  gap: number;
+}
 
 const VirtualizedList: React.FC<VirtualizedListProps> = ({
   dataLength,
@@ -85,13 +95,36 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
   return (
     <div
       ref={containerRef}
-      className="virtualized-container"
-      style={{ height: viewportHeight }}
+      style={{
+        height: viewportHeight,
+        width: "100%",
+        margin: "auto",
+        overflowY: "auto",
+        position: "relative",
+      }}
     >
-      <div className="virtualized-inner" style={{ height: totalHeight }}>
+      <div
+        className="virtualized-inner"
+        style={{ height: totalHeight, position: "relative" }}
+      >
         {renderItems()}
         {isLoading && (
-          <div className="loading-indicator">Fetching more data...</div>
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0",
+              left: "50%",
+              transform: "translateX(-50%)",
+              padding: "10px",
+              background: "rgba(0, 0, 0, 0.5)",
+              color: "white",
+              borderRadius: "5px",
+              textAlign: "center",
+              fontFamily: "Arial, Helvetica, sans-serif",
+            }}
+          >
+            Fetching more data...
+          </div>
         )}
       </div>
     </div>
