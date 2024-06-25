@@ -1,4 +1,4 @@
-import { VirtualizedList } from "./components";
+import VirtualizedList from "./components/VirtualizedList";
 
 const data = Array.from({ length: 1000 }).map((_, i) => i + 1);
 
