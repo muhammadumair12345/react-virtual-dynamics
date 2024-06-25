@@ -5,19 +5,8 @@ import React, {
   useMemo,
   useCallback,
   ReactNode,
-} from 'react';
-import './style.css';
-
-interface VirtualizedListProps {
-  dataLength: number;
-  viewportHeight: number;
-  gridColumns?: number;
-  loadMore?: () => void;
-  isLoading?: boolean;
-  renderItem: (index: number, style: React.CSSProperties) => ReactNode;
-  itemHeight: number;
-  gap: number;
-}
+} from "react";
+import "./style.css";
 
 const VirtualizedList: React.FC<VirtualizedListProps> = ({
   dataLength,
@@ -54,11 +43,11 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
   useEffect(() => {
     const container = containerRef.current;
     if (container) {
-      container.addEventListener('scroll', handleScroll);
+      container.addEventListener("scroll", handleScroll);
     }
     return () => {
       if (container) {
-        container.removeEventListener('scroll', handleScroll);
+        container.removeEventListener("scroll", handleScroll);
       }
     };
   }, [handleScroll]);
@@ -82,7 +71,7 @@ const VirtualizedList: React.FC<VirtualizedListProps> = ({
       const rowIndex = Math.floor(index / itemsPerRow);
       const top = rowIndex * rowHeight;
       const style: React.CSSProperties = {
-        position: 'absolute',
+        position: "absolute",
         top,
         left: `${(index % itemsPerRow) * (100 / itemsPerRow)}%`,
         width: `calc(${100 / itemsPerRow}% - ${gap}px)`,

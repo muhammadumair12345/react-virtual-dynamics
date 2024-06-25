@@ -1,18 +1,8 @@
 {
   "name": "react-virtual-dynamics",
-  "private": false,
   "version": "1.0.4",
+  "private": true,
   "description": "A React component for efficiently rendering large lists or grids of items using virtualization. This component improves performance by only rendering items that are currently visible in the viewport. Additionally, it supports infinite scrolling by dynamically loading more data as the user scrolls near the end of the list.",
-  "main": "dist/react-virtual-dynamics.cjs.js",
-  "module": "dist/react-virtual-dynamics.es.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/muhammadumair12345/react-virtual-dynamics.git"
-  },
   "keywords": [
     "react",
     "virtualized",
@@ -21,52 +11,43 @@
   ],
   "author": "Muhammad Umair",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muhammadumair12345/react-virtual-dynamics.git"
+  },
   "bugs": {
     "url": "https://github.com/muhammadumair12345/react-virtual-dynamics/issues"
   },
-  "homepage": "https://github.com/muhammadumair12345/react-virtual-dynamics#readme",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "test": "jest",
-    "clean": "rimraf dist",
-    "prebuild": "npm run clean",
-    "build": "tsc -b && vite build",
-    "coverage": "npm test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}'",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "prepare": "husky"
-  },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-virtual-dynamics": "file:react-virtual-dynamics-1.0.3.tgz"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^16.0.0",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.101",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
-    "@vitejs/plugin-react": "^4.3.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "husky": "^9.0.11",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "jest-transformer-svg": "^2.0.2",
-    "lint-staged": "^15.2.7",
-    "prettier": "^3.3.2",
-    "ts-jest": "^29.1.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.1",
-    "vite-plugin-dts": "^3.9.1",
-    "vite-tsconfig-paths": "^4.3.2"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

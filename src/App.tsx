@@ -1,4 +1,4 @@
-import { VirtualizedList } from './components';
+import { VirtualizedList } from "./components";
 
 const data = Array.from({ length: 1000 }).map((_, i) => i + 1);
 
@@ -15,8 +15,8 @@ const App = () => {
           key={index}
           style={{
             ...style,
-            border: '1px solid black',
-            backgroundColor: 'gray',
+            border: "1px solid black",
+            backgroundColor: "gray",
           }}
         >
           {data[index]}
