@@ -1,6 +1,6 @@
 {
   "name": "react-virtual-dynamics",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": false,
   "description": "A React component for efficiently rendering large lists or grids of items using virtualization. This component improves performance by only rendering items that are currently visible in the viewport. Additionally, it supports infinite scrolling by dynamically loading more data as the user scrolls near the end of the list.",
   "keywords": [
