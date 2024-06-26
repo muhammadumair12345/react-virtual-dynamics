@@ -1,62 +1,73 @@
 {
-  "name": "react-virtual-dynamics",
-  "version": "1.0.9",
-  "private": false,
-  "description": "A React component for efficiently rendering large lists or grids of items using virtualization. This component improves performance by only rendering items that are currently visible in the viewport. Additionally, it supports infinite scrolling by dynamically loading more data as the user scrolls near the end of the list.",
-  "keywords": [
-    "react",
-    "virtualized",
-    "list",
-    "npm-package"
-  ],
-  "author": "Muhammad Umair",
-  "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.esm.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/muhammadumair12345/react-virtual-dynamics.git"
-  },
-  "bugs": {
-    "url": "https://github.com/muhammadumair12345/react-virtual-dynamics/issues"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "tsc",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "tslib": "^2.6.3"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^16.0.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.101",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "react-virtual-dynamics",
+	"version": "1.0.9",
+	"private": false,
+	"description": "A React component for efficiently rendering large lists or grids of items using virtualization. This component improves performance by only rendering items that are currently visible in the viewport. Additionally, it supports infinite scrolling by dynamically loading more data as the user scrolls near the end of the list.",
+	"keywords": [
+		"react",
+		"virtualized",
+		"list",
+		"npm-package"
+	],
+	"author": "Muhammad Umair",
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"module": "./dist/index.esm.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/muhammadumair12345/react-virtual-dynamics.git"
+	},
+	"bugs": {
+		"url": "https://github.com/muhammadumair12345/react-virtual-dynamics/issues"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "tsc",
+		"coverage": "npm test --coverage --watchAll --collectCoverageFrom='tests/**/*.{ts,tsx}'",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"clean": "rimraf dist",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"prepare": "husky"
+	},
+	"dependencies": {
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.5.0",
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^16.0.0",
+		"@testing-library/user-event": "^13.5.0",
+		"@types/jest": "^27.5.2",
+		"@types/node": "^16.18.101",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"eslint": "^8.57.0",
+		"eslint-plugin-react": "^7.34.3",
+		"globals": "^15.6.0",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.7",
+		"prettier": "3.3.2",
+		"react-scripts": "5.0.1",
+		"typescript": "^4.9.5",
+		"typescript-eslint": "^7.14.1",
+		"web-vitals": "^2.1.4"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
