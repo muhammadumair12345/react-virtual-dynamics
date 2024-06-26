@@ -18,24 +18,24 @@ Here is a basic example of how to use the `VirtualizedList` component:
 
 ```tsx
 import React from 'react';
-import VirtualizedList from 'react-virtual-dynamics';
+import { VirtualizedList } from 'react-virtual-dynamics';
 
-const data = Array.from({ length: 200 }).map((_, i) => i + 1);
+const data = Array.from({ length: 1000 }).map((_, i) => i + 1);
 
 const App = () => {
-  return (
-    <VirtualizedList
-      dataLength={data.length}
-      viewportHeight={500}
-      itemHeight={100}
-      gap={10}
-      renderItem={(index, style) => (
-        <div key={index} style={style}>
-          {data[index]}
-        </div>
-      )}
-    />
-  );
+	return (
+		<VirtualizedList
+			dataLength={data.length}
+			viewportHeight={500}
+			itemHeight={100}
+			gap={10}
+			renderItem={(index, style) => (
+				<div key={index} style={style}>
+					{data[index]}
+				</div>
+			)}
+		/>
+	);
 };
 
 export default App;
@@ -60,43 +60,43 @@ This example demonstrates how to use the `VirtualizedList` component with infini
 
 ```tsx
 import React, { useState } from 'react';
-import VirtualizedList from 'react-virtual-dynamics';
+import { VirtualizedList } from 'react-virtual-dynamics';
 
-const initialData = Array.from({ length: 50 }).map((_, i) => i + 1);
+const initialData = Array.from({ length: 200 }).map((_, i) => i + 1);
 
 const App = () => {
-  const [data, setData] = useState(initialData);
-  const [isLoading, setIsLoading] = useState(false);
+	const [data, setData] = useState(initialData);
+	const [isLoading, setIsLoading] = useState(false);
 
-  const loadMore = () => {
-    if (!isLoading) {
-      setIsLoading(true);
-      setTimeout(() => {
-        const moreData = Array.from({ length: 20 }).map(
-          (_, i) => data.length + i + 1
-        );
-        setData([...data, ...moreData]);
-        setIsLoading(false);
-      }, 1000);
-    }
-  };
+	const loadMore = () => {
+		if (!isLoading) {
+			setIsLoading(true);
+			setTimeout(() => {
+				const moreData = Array.from({ length: 20 }).map(
+					(_, i) => data.length + i + 1
+				);
+				setData([...data, ...moreData]);
+				setIsLoading(false);
+			}, 1000);
+		}
+	};
 
-  return (
-    <VirtualizedList
-      dataLength={data.length}
-      viewportHeight={500}
-      gridColumns={4}
-      itemHeight={100}
-      gap={10}
-      loadMore={loadMore}
-      isLoading={isLoading}
-      renderItem={(index, style) => (
-        <div key={index} style={style}>
-          {data[index]}
-        </div>
-      )}
-    />
-  );
+	return (
+		<VirtualizedList
+			dataLength={data.length}
+			viewportHeight={500}
+			gridColumns={4}
+			itemHeight={100}
+			gap={10}
+			loadMore={loadMore}
+			isLoading={isLoading}
+			renderItem={(index, style) => (
+				<div key={index} style={style}>
+					{data[index]}
+				</div>
+			)}
+		/>
+	);
 };
 
 export default App;
