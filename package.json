@@ -26,7 +26,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "tsc",
+		"build": "babel src --out-dir dist --copy-files",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"clean": "rimraf dist",
@@ -37,6 +37,9 @@
 		"react-dom": "^18.3.1"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.24.7",
+		"@babel/preset-env": "^7.24.7",
+		"@babel/preset-react": "^7.24.7",
 		"@testing-library/jest-dom": "^5.17.0",
 		"@testing-library/react": "^16.0.0",
 		"@testing-library/user-event": "^13.5.0",
