@@ -3,7 +3,6 @@
 		"module": "esnext",
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
-		"importHelpers": true,
 		"declaration": true,
 		"sourceMap": true,
 		"rootDir": "./src",
